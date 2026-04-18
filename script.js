@@ -19,14 +19,15 @@ function goRegister() {
 function goLogin() {
   window.location.href = "login.html";
 }
-function goBack() {
-    if (document.referrer !== "") {
-        window.history.back();
+function goBack(page) {
+    if (page === "services") {
+        window.location.href = "services.html";
+    } else if (page === "home") {
+        window.location.href = "home.html";
     } else {
         window.location.href = "home.html";
     }
 }
-
 function goBackServices() {
   window.location.href = "services.html";
 }
