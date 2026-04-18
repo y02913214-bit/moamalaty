@@ -1,9 +1,12 @@
 /* ===== Splash ===== */
 if (window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")) {
-  setTimeout(() => {
-    window.location.href = "login.html";
-  }, 3000);
-}
+ setTimeout(() => {
+    if (localStorage.getItem("isLoggedIn") === "true") {
+        window.location.href = "home.html";
+    } else {
+        window.location.href = "login.html";
+    }
+}, 3000);
 
 /* ===== تنقل ===== */
 function goRegister() {
@@ -21,7 +24,20 @@ function goBack() {
 function goBackServices() {
   window.location.href = "services.html";
 }
+function login() {
+    let email = document.getElementById("loginEmail").value;
+    let password = document.getElementById("loginPassword").value;
 
+    if (email !== "" && password !== "") {
+        // نحفظ تسجيل الدخول
+        localStorage.setItem("isLoggedIn", "true");
+
+        // نروح للصفحة الرئيسية
+        window.location.href = "home.html";
+    } else {
+        document.getElementById("loginError").innerText = "املأ الحقول";
+    }
+}
 /* ===== اظهار كلمة المرور ===== */
 function togglePassword(id) {
   let input = document.getElementById(id);
