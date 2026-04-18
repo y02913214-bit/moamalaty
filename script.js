@@ -20,7 +20,11 @@ function goLogin() {
   window.location.href = "login.html";
 }
 function goBack() {
-    window.history.back();
+    if (document.referrer !== "") {
+        window.history.back();
+    } else {
+        window.location.href = "home.html";
+    }
 }
 
 function goBackServices() {
