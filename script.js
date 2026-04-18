@@ -1,13 +1,10 @@
-/* ===== Splash ===== */
-if (window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")) {
- setTimeout(() => {
+setTimeout(() => {
     if (localStorage.getItem("isLoggedIn") === "true") {
         window.location.href = "home.html";
     } else {
         window.location.href = "login.html";
     }
 }, 3000);
-
 /* ===== تنقل ===== */
 function goRegister() {
   window.location.href = "register.html";
