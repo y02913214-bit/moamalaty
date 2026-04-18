@@ -1,17 +1,18 @@
-if (document.querySelector(".loader")) {
+window.onload = function () {
 
+    // التحويل من شاشة البداية
     setTimeout(() => {
-
         if (localStorage.getItem("isLoggedIn") === "true") {
             window.location.href = "home.html";
         } else {
             window.location.href = "login.html";
         }
+    }, 2000);
 
-    }, 3000);
-
-}
-
+    // تحميل الصفحات الأخرى
+    loadServices();
+    loadDetails();
+};
 
 /* ===== تنقل ===== */
 function goRegister() {
