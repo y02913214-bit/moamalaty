@@ -1,4 +1,4 @@
-if (document.body && document.body.innerHTML.includes("loader")) {
+if (document.querySelector(".loader")) {
 
     setTimeout(() => {
 
