@@ -164,7 +164,7 @@ if (type === "المرور") {
 function loadDetails() {
   let title = document.getElementById("serviceTitle");
   let stepsContainer = document.getElementById("stepsContainer");
-  let time = document.getElementById("time");
+  
   let fees = document.getElementById("fees");
 
   if (!stepsContainer) return;
@@ -172,7 +172,7 @@ function loadDetails() {
   let service = localStorage.getItem("serviceName");
   title.innerText = service;
 
-let stepsContainer = document.getElementById("stepsContainer");
+
 
 stepsContainer.innerHTML = "";
 
