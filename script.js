@@ -181,14 +181,7 @@ if (service === "إصدار إجازة سوق لأول مرة") {
     
 
     stepsContainer.innerHTML = `
-    ol {
-    padding-right: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-    line-height: 1.8;
-}
+    
     
         <li>البطاقة الموحدة</li>
         <li>بطاقة السكن</li>
