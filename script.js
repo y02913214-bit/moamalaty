@@ -235,6 +235,3 @@ window.onload = function () {
 function goBack() {
   window.history.back();
 }
-function openWaze(lat, lng) {
-   window.open(https://waze.com/ul?ll=${lat},${lng}&navigate=yes, '_blank');
-}
