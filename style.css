@@ -142,4 +142,24 @@ button {
 .card:hover {
   transform: translateY(-5px) scale(1.02);
   z-index: 10;
+  .back-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #6c8fa3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.back-btn span {
+    font-size: 20px;
+}
 }
