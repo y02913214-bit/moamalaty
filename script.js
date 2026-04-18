@@ -120,16 +120,18 @@ function loadServices() {
   let type = localStorage.getItem("serviceType");
   title.innerText = "خدمات " + type;
 
-  let services = [
-    "طلب إصدار",
-    "تجديد معاملة",
-    "بدل ضائع",
-    "استعلام",
-    "حجز موعد"
-  ];
 
   list.innerHTML = "";
-
+let services = [
+    "إصدار إجازة سوق لأول مرة",
+    "تجديد إجازة السوق",
+    "تجديد سنوية السيارة",
+    "تحويل ملكية",
+    "تغيير فئة إجازة سوق من خصوصي إلى عمومي",
+    "تسجيل مركبة لأول مرة",
+    "إصدار بدل ضائع أو تالف للسنوية",
+    "إصدار بدل ضائع أو تالف لإجازة السوق"
+];
   services.forEach((service, index) => {
     let div = document.createElement("div");
     div.className = "card";
