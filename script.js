@@ -230,8 +230,13 @@ function filterServices() {
 
 /* ===== تشغيل ===== */
 window.onload = function () {
-  loadServices();
-  loadDetails();
+  if (document.getElementById("servicesList")) {
+    loadServices();
+  }
+
+  if (document.getElementById("stepsContainer")) {
+    loadDetails();
+  }
 };
 function goBack() {
   window.history.back();
