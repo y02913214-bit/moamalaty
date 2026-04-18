@@ -1,4 +1,4 @@
-if (window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")) {
+if (window.location.pathname.includes("index.html") || window.location.pathname === "/" || window.location.pathname === "") {
 
     setTimeout(() => {
 
