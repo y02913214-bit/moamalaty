@@ -1,73 +1,102 @@
-body { margin: 0; font-family: 'Segoe UI', sans-serif; direction: rtl; background: #f4f6f9; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  direction: rtl;
+  background: #f4f6f9;
+}
 
-/* Splash */ .splash { height: 100vh; background: linear-gradient(to right, #1e3c72, #2a5298); display: flex; justify-content: center; align-items: center; }
+/* ===== الهيدر ===== */
+.header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 20px;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
 
-.content { text-align: center; color: white; }
+/* ===== زر الرجوع ===== */
+.back-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: white;
+  color: #2a5298;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-.logo { width: 80px; height: 80px; background: white; color: #2a5298; border-radius: 15px; display: flex; justify-content: center; align-items: center; font-size: 35px; margin: auto; margin-bottom: 15px; }
+/* ===== الصفحة ===== */
+.home-page {
+  padding: 20px;
+}
 
-h1 { margin: 0; }
+/* ===== العنوان ===== */
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-p { opacity: 0.8; }
+/* ===== البحث ===== */
+.search {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 15px 0;
+}
 
-/* Login + Register */ .login-page { height: 100vh; display: flex; justify-content: center; align-items: center; }
+/* ===== الكروت ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
 
-.login-box { background: white; padding: 30px; width: 320px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+/* ===== الكارد ===== */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  border-right: 5px solid #2a5298;
+  text-align: center;
+}
 
-display: flex; flex-direction: column; gap: 15px; }
+.card:hover {
+  transform: translateY(-3px);
+}
 
-.login-box h2 { margin: 0; text-align: center; }
+/* ===== ألوان مثل الصورة ===== */
+.card:nth-child(1) { border-right-color: #00bcd4; }
+.card:nth-child(2) { border-right-color: #ff9800; }
+.card:nth-child(3) { border-right-color: #9c27b0; }
+.card:nth-child(4) { border-right-color: #4caf50; }
+.card:nth-child(5) { border-right-color: #f44336; }
+.card:nth-child(6) { border-right-color: #3f51b5; }
 
-/* inputs */ input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; }
+/* ===== العناوين ===== */
+h3 {
+  color: #2a5298;
+  border-right: 4px solid #2a5298;
+  padding-right: 10px;
+  margin-top: 20px;
+}
 
-/* buttons */ button { width: 100%; padding: 12px; background: #2a5298; color: white; border: none; border-radius: 8px; cursor: pointer; }
+/* ===== القوائم ===== */
+ul, ol {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
 
-/* switch text */ .switch-text { text-align: center; font-size: 14px; color: #666; }
-
-.switch-text span { color: #2a5298; cursor: pointer; font-weight: bold; }
-
-/* ===== الصفحة الرئيسية بنفس الهوية ===== */
-
-.home-page { padding: 20px; }
-
-.title { text-align: center; margin-bottom: 10px; }
-
-/* البحث */ .search { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; margin: 15px 0; }
-
-/* الكروت */ .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-
-.card { background: white; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); cursor: pointer;
-
-transition: transform 0.25s ease, box-shadow 0.25s ease; will-change: transform; position: relative; } .card:hover { transform: translateY(-5px) scale(1.02); z-index: 10; .back-btn { position: fixed; top: 20px; right: 20px; background: #6c8fa3; color: white; border: none; border-radius: 10px; padding: 10px 15px; font-size: 16px; display: flex; align-items: center; gap: 8px; cursor: pointer; z-index: 999; } .back-btn { position: fixed; top: 20px; right: 20px; background: #6c8fa3; color: white; border: none; border-radius: 10px; padding: 10px 15px; font-size: 16px; cursor: pointer; z-index: 999; } .back-btn span { font-size: 20px; } body { font-family: 'Cairo', sans-serif; background: #f5f7fa; direction: rtl; }
-
-/* العناوين */ h3 { color: #2a5298; border-right: 5px solid #2a5298; padding-right: 10px; margin-top: 20px; }
-
-/* القوائم */ ul, ol { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-
-li { margin-bottom: 10px; font-size: 15px; line-height: 1.8; }
-
-/* رسالة النجاح */ .success { background: #e8f8f0; color: #27ae60; padding: 12px; border-radius: 10px; text-align: center; font-weight: bold; margin-top: 15px; }
-
-/* الرسوم / .fees { background: #fff4e5; color: #ff9800; padding: 12px; border-radius: 10px; text-align: center; font-weight: bold; margin-top: 10px; } / الخط والخلفية */ body { font-family: 'Cairo', sans-serif; background: #f4f6f9; direction: rtl; }
-
-/* الهيدر */ .header { background: linear-gradient(135deg, #1e3c72, #2a5298); padding: 20px; color: white; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; }
-
-/* زر الرجوع */ .back-btn { background: white; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; margin-bottom: 10px; }
-
-/* العناوين */ h3 { color: #2a5298; border-right: 4px solid #2a5298; padding-right: 10px; margin-top: 20px; }
-
-/* القوائم */ ul, ol { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-
-/* الرسوم */ p { font-size: 16px; } .section-title { margin-top: 20px; } body { text-align: right; padding: 15px; } .card { background: white; padding: 15px; border-radius: 15px; margin-top: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); } ol { padding-right: 20px; }
-
-li { margin-bottom: 10px; line-height: 1.8; }
-
-ul { padding-right: 20px; }
-
-h3 { margin-top: 15px; color: #2a5298; } .section-title { font-size: 20px; margin-top: 20px; margin-bottom: 10px; color: #2a5298; }
-
-.card { background: #fff; padding: 15px; margin-bottom: 10px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-
-ol { padding-right: 20px; }
-
-li { margin-bottom: 8px; line-height: 1.7; }
+li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
