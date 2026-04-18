@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنشاء حساب</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-page">
+
+  <div class="login-box">
+
+    <!-- زر رجوع -->
+    <span onclick="goLogin()" style="cursor:pointer; font-size:18px;">⬅️</span>
+
+    <h2>إنشاء حساب</h2>
+
+    <input type="email" id="email" placeholder="البريد الإلكتروني">
+
+    <div style="position:relative;">
+      <input type="password" id="password" placeholder="كلمة المرور">
+      <span onclick="togglePassword('password')" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); cursor:pointer;">👁️</span>
+    </div>
+
+    <div style="position:relative;">
+      <input type="password" id="confirm" placeholder="تأكيد كلمة المرور">
+      <span onclick="togglePassword('confirm')" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); cursor:pointer;">👁️</span>
+    </div>
+
+    <button onclick="register()">إنشاء حساب</button>
+
+    <p id="error" style="color:red; font-size:14px;"></p>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

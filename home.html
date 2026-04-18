@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الرئيسية</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="font-family:'Cairo', sans-serif; background:#f4f6f9;">
+
+<!-- هيدر -->
+<div style="
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 25px;
+  color: white;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+">
+
+  <h2 style="margin:0;">مرحباً بك 👋</h2>
+  <p style="margin:5px 0 0;">اختر المديرية وابدأ معاملتك</p>
+
+</div>
+
+<div class="home-page">
+
+  <!-- البحث -->
+  <div style="position:relative; margin-top:20px;">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="ابحث عن مديرية..." 
+      class="search"
+      onkeyup="searchFunction()"
+      style="padding-right:45px; border-radius:15px;"
+    >
+
+    <span style="
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+    ">🔍</span>
+
+    <div id="suggestions" style="
+      background:white;
+      position:absolute;
+      width:100%;
+      border-radius:15px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+      margin-top:5px;
+      overflow:hidden;
+      z-index:10;
+    "></div>
+  </div>
+
+  <!-- المديريات -->
+  <div class="cards" style="margin-top:25px;">
+
+    <div class="card" onclick="openServices('مرور')" style="border-right:5px solid #2a5298;">🚗 مديرية مرور ديالى</div>
+
+    <div class="card" onclick="openServices('جنسية')" style="border-right:5px solid #ff9800;">🪪 مديرية الجنسية ديالى</div>
+
+    <div class="card" onclick="openServices('صحة')" style="border-right:5px solid #e91e63;">🏥 دائرة صحة ديالى</div>
+
+    <div class="card" onclick="openServices('تربية')" style="border-right:5px solid #9c27b0;">🎓 مديرية تربية ديالى</div>
+
+    <div class="card" onclick="openServices('كهرباء')" style="border-right:5px solid #ffc107;">⚡ دائرة كهرباء ديالى</div>
+
+    <div class="card" onclick="openServices('ماء')" style="border-right:5px solid #03a9f4;">💧 دائرة ماء ديالى</div>
+
+    <div class="card" onclick="openServices('بلدية')" style="border-right:5px solid #607d8b;">🏢 بلدية بعقوبة</div>
+
+    <div class="card" onclick="openServices('محكمة')" style="border-right:5px solid #795548;">⚖️ محكمة استئناف ديالى</div>
+
+    <div class="card" onclick="openServices('تقاعد')" style="border-right:5px solid #4caf50;">💰 هيئة التقاعد</div>
+
+    <div class="card" onclick="openServices('تجارة')" style="border-right:5px solid #ff5722;">📦 وزارة التجارة</div>
+
+    <div class="card" onclick="openServices('جوازات')" style="border-right:5px solid #3f51b5;">🛂 الجوازات</div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

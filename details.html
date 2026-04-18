@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل الخدمة</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="font-family:'Cairo', sans-serif; background:#f4f6f9;">
+
+<!-- هيدر -->
+<div style="
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 20px;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+">
+
+  <span onclick="goBackServices()" style="cursor:pointer;">⬅️ رجوع</span>
+  <h2 id="serviceTitle" style="margin-top:10px;">الخدمة</h2>
+
+</div>
+
+<div class="home-page">
+
+  <!-- الخطوات -->
+  <h3 style="margin-top:20px;">📋 خطوات المعاملة</h3>
+
+  <div id="stepsContainer"></div>
+
+  <!-- الوقت -->
+  <div style="
+    margin-top:25px;
+    padding:15px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  ">
+    ⏱ الوقت المتوقع: <span id="time"></span>
+  </div>
+
+  <!-- الرسوم -->
+  <div style="
+    margin-top:15px;
+    padding:15px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  ">
+    💰 الرسوم: <span id="fees"></span>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
