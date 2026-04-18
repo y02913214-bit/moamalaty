@@ -19,9 +19,8 @@ function goRegister() {
 function goLogin() {
   window.location.href = "login.html";
 }
-
 function goBack() {
-  window.location.href = "home.html";
+    window.history.back();
 }
 
 function goBackServices() {
