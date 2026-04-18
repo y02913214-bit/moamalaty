@@ -142,7 +142,7 @@ button {
 .card:hover {
   transform: translateY(-5px) scale(1.02);
   z-index: 10;
-  .back-btn {
+ .back-btn {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -161,5 +161,4 @@ button {
 
 .back-btn span {
     font-size: 20px;
-}
 }
