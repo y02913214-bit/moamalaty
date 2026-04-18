@@ -28,8 +28,14 @@ function goBack(page) {
         window.location.href = "home.html";
     }
 }
-function goBackServices() {
-  window.location.href = "services.html";
+function goBack(page) {
+    if (page === "services") {
+        window.location.href = "services.html";
+    } else if (page === "home") {
+        window.location.href = "home.html";
+    } else {
+        window.location.href = "home.html";
+    }
 }
 function login() {
     let email = document.getElementById("loginEmail").value;
