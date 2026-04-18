@@ -1,4 +1,4 @@
-if (window.location.pathname.includes("index.html") || window.location.pathname === "/" || window.location.pathname === "") {
+if (document.body && document.body.innerHTML.includes("loader")) {
 
     setTimeout(() => {
 
@@ -11,6 +11,8 @@ if (window.location.pathname.includes("index.html") || window.location.pathname 
     }, 3000);
 
 }
+
+
 /* ===== تنقل ===== */
 function goRegister() {
   window.location.href = "register.html";
