@@ -230,3 +230,6 @@ window.onload = function () {
   loadServices();
   loadDetails();
 };
+function goBack() {
+  window.history.back();
+}
