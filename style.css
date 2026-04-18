@@ -7,27 +7,32 @@ body {
 
 /* ===== الهيدر ===== */
 .header {
+  
   background: linear-gradient(135deg, #1e3c72, #2a5298);
-  padding: 20px;
+  padding: 15px 20px;
   color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  text-align: center;
-}
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header h2 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
 /* ===== زر الرجوع ===== */
+
 .back-btn {
-  position: absolute;
-  right: 20px;
-  top: 20px;
   background: white;
   color: #2a5298;
   border: none;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
 }
-
 /* ===== الصفحة ===== */
 .home-page {
   padding: 20px;
@@ -43,11 +48,10 @@ body {
 .search {
   width: 100%;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid #ddd;
-  margin: 15px 0;
+  margin: 20px 0;
 }
-
 /* ===== الكروت ===== */
 .cards {
   display: grid;
