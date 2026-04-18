@@ -8,16 +8,32 @@
 </head>
 <body>
 <button onclick="goBack()">رجوع</button>
+
 <div class="home-page">
 
-  <h2 id="title" class="title">الخدمات</h2>
+    <!-- قسم الخدمات -->
+    <div id="servicesSection">
 
-  <input type="text" id="serviceSearch" placeholder="ابحث عن خدمة..." class="search" onkeyup="filterServices()">
+        <h2 id="title" class="title">الخدمات</h2>
 
-  <div class="cards" id="servicesList"></div>
+        <input type="text" id="serviceSearch" placeholder="ابحث عن خدمة..." class="search" onkeyup="filterServices()">
+
+        <div class="cards" id="servicesList"></div>
+
+    </div>
+
+    <!-- قسم الخطوات -->
+    <div id="stepsSection" style="display:none;">
+
+        <h2 class="title">خطوات الخدمة</h2>
+
+        <div id="stepsContent"></div>
+
+        <button onclick="backToServices()">رجوع</button>
+
+    </div>
 
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
