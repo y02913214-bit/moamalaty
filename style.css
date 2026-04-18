@@ -1,126 +1,12 @@
-/* ===== إعداد عام ===== */
 body {
   margin: 0;
   font-family: 'Cairo', sans-serif;
   direction: rtl;
   background: #f4f6f9;
-  text-align: right;
   padding: 15px;
 }
 
-/* ===== Splash ===== */
-.splash {
-  height: 100vh;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  text-align: center;
-  color: white;
-}
-
-.logo {
-  width: 80px;
-  height: 80px;
-  background: white;
-  color: #2a5298;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  margin: auto;
-  margin-bottom: 15px;
-}
-
-/* ===== Login / Register ===== */
-.login-page {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-box {
-  background: white;
-  padding: 30px;
-  width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background: #2a5298;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* ===== الصفحة الرئيسية ===== */
-.home-page {
-  padding: 10px;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* البحث */
-.search {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  margin: 15px 0;
-}
-
-/* ===== الكروت ===== */
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 15px;
-  margin-top: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px) scale(1.02);
-}
-
-/* ===== زر الرجوع ===== */
-.back-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #2a5298;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 999;
-}
-
-/* ===== الهيدر ===== */
+/* الهيدر */
 .header {
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   padding: 20px;
@@ -129,20 +15,40 @@ button {
   border-bottom-right-radius: 20px;
 }
 
-/* ===== العناوين ===== */
-h3 {
+/* زر رجوع */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
   color: #2a5298;
-  border-right: 4px solid #2a5298;
-  padding-right: 10px;
-  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-/* ===== القوائم ===== */
-ul, ol {
+/* عنوان */
+.section-title {
+  font-size: 20px;
+  color: #2a5298;
+  margin-top: 20px;
+  border-right: 4px solid #2a5298;
+  padding-right: 10px;
+}
+
+/* كارد */
+.card {
   background: white;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 15px;
+  margin-top: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* القوائم */
+ul, ol {
+  padding-right: 20px;
 }
 
 li {
@@ -150,16 +56,7 @@ li {
   line-height: 1.8;
 }
 
-/* ===== صناديق (تصميم جديد) ===== */
-.box {
-  background: white;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-/* ===== رسالة النجاح ===== */
+/* النجاح */
 .success {
   background: #e8f8f0;
   color: #27ae60;
@@ -167,10 +64,9 @@ li {
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  margin-top: 15px;
 }
 
-/* ===== الرسوم ===== */
+/* الرسوم */
 .fees {
   background: #fff4e5;
   color: #ff9800;
@@ -178,5 +74,4 @@ li {
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  margin-top: 10px;
 }
