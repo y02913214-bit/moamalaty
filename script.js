@@ -175,7 +175,7 @@ function loadDetails() {
 
 
 
-stepsContainer.innerHTML = "";
+
 
 if (service === "إصدار إجازة سوق لأول مرة") {
     
@@ -264,12 +264,7 @@ if (service === "إصدار إجازة سوق لأول مرة") {
 
   stepsContainer.innerHTML = "";
 
-  steps.forEach((step, index) => {
-    let div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = "<b>الخطوة " + (index + 1) + ":</b> " + step;
-    stepsContainer.appendChild(div);
-  });
+  
 }
 
 /* ===== البحث ===== */
