@@ -283,4 +283,20 @@ p {
     margin-top: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
-  
+  ol {
+  padding-right: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+ul {
+  padding-right: 20px;
+}
+
+h3 {
+  margin-top: 15px;
+  color: #2a5298;
+}
