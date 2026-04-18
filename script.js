@@ -1,17 +1,25 @@
 window.onload = function () {
 
-    // التحويل من شاشة البداية
-    setTimeout(() => {
-        if (localStorage.getItem("isLoggedIn") === "true") {
-            window.location.href = "home.html";
-        } else {
-            window.location.href = "login.html";
-        }
-    }, 2000);
+    // شاشة البداية (index)
+    if (document.querySelector(".loader")) {
+        setTimeout(() => {
+            if (localStorage.getItem("isLoggedIn") === "true") {
+                window.location.href = "home.html";
+            } else {
+                window.location.href = "login.html";
+            }
+        }, 2000);
+    }
 
-    // تحميل الصفحات الأخرى
-    loadServices();
-    loadDetails();
+    // صفحة الخدمات
+    if (document.getElementById("servicesList")) {
+        loadServices();
+    }
+
+    // صفحة التفاصيل
+    if (document.getElementById("stepsContainer")) {
+        loadDetails();
+    }
 };
 
 /* ===== تنقل ===== */
@@ -22,38 +30,11 @@ function goRegister() {
 function goLogin() {
   window.location.href = "login.html";
 }
-function goBack(page) {
-    if (page === "services") {
-        window.location.href = "services.html";
-    } else if (page === "home") {
-        window.location.href = "home.html";
-    } else {
-        window.location.href = "home.html";
-    }
-}
-function goBack(page) {
-    if (page === "services") {
-        window.location.href = "services.html";
-    } else if (page === "home") {
-        window.location.href = "home.html";
-    } else {
-        window.location.href = "home.html";
-    }
-}
-function login() {
-    let email = document.getElementById("loginEmail").value;
-    let password = document.getElementById("loginPassword").value;
 
-    if (email !== "" && password !== "") {
-        // نحفظ تسجيل الدخول
-        localStorage.setItem("isLoggedIn", "true");
-
-        // نروح للصفحة الرئيسية
-        window.location.href = "home.html";
-    } else {
-        document.getElementById("loginError").innerText = "املأ الحقول";
-    }
+function goBack() {
+  window.history.back();
 }
+
 /* ===== اظهار كلمة المرور ===== */
 function togglePassword(id) {
   let input = document.getElementById(id);
@@ -76,13 +57,6 @@ function register() {
 
   if (!email.includes("@") || !email.includes(".com")) {
     error.innerText = "الإيميل غير صحيح";
-    return;
-  }
-
-  let strongPassword = /^(?=.*[A-Za-z])(?=.*[\W_]).{5,}$/;
-
-  if (!strongPassword.test(password)) {
-    error.innerText = "كلمة المرور ضعيفة";
     return;
   }
 
@@ -113,15 +87,13 @@ function login() {
     return;
   }
 
-  if (!email.includes("@") || !email.includes(".com")) {
-    error.innerText = "الإيميل غير صحيح";
-    return;
-  }
-
   if (email !== savedEmail || password !== savedPassword) {
     error.innerText = "بيانات غير صحيحة";
     return;
   }
+
+  // حفظ تسجيل الدخول
+  localStorage.setItem("isLoggedIn", "true");
 
   window.location.href = "home.html";
 }
@@ -226,18 +198,4 @@ function filterServices() {
     let text = cards[i].innerText.toLowerCase();
     cards[i].style.display = text.includes(input) ? "block" : "none";
   }
-}
-
-/* ===== تشغيل ===== */
-window.onload = function () {
-  if (document.getElementById("servicesList")) {
-    loadServices();
-  }
-
-  if (document.getElementById("stepsContainer")) {
-    loadDetails();
-  }
-};
-function goBack() {
-  window.history.back();
 }
