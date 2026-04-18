@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>إنشاء حساب</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إنشاء حساب</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.box h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #1e3c72;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.switch {
+    margin-top: 15px;
+}
+
+.switch span {
+    color: #1e3c72;
+    cursor: pointer;
+    font-weight: bold;
+}
+</style>
+
 </head>
+
 <body>
 
-<div class="login-page">
-
-  <div class="login-box">
-
-    <!-- زر رجوع -->
-    <span onclick="goLogin()" style="cursor:pointer; font-size:18px;">⬅️</span>
-
+<div class="box">
     <h2>إنشاء حساب</h2>
 
+    <input type="text" id="name" placeholder="الاسم">
     <input type="email" id="email" placeholder="البريد الإلكتروني">
+    <input type="password" id="password" placeholder="كلمة المرور">
 
-    <div style="position:relative;">
-      <input type="password" id="password" placeholder="كلمة المرور">
-      <span onclick="togglePassword('password')" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); cursor:pointer;">👁️</span>
-    </div>
+    <button onclick="register()">إنشاء</button>
 
-    <div style="position:relative;">
-      <input type="password" id="confirm" placeholder="تأكيد كلمة المرور">
-      <span onclick="togglePassword('confirm')" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); cursor:pointer;">👁️</span>
-    </div>
+    <p class="switch">
+        عندك حساب؟
+        <span onclick="goLogin()">تسجيل الدخول</span>
+    </p>
 
-    <button onclick="register()">إنشاء حساب</button>
-
-    <p id="error" style="color:red; font-size:14px;"></p>
-
-  </div>
-
+    <p id="registerError" style="color:red;"></p>
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
