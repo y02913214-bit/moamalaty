@@ -7,36 +7,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button class="back-btn" onclick="goBack('home')">
-    <span>⬅️</span>
-    رجوع
-</button>
-
+<div class="header">
+    <span onclick="goBack()" class="back-btn">⬅ رجوع</span>
+    <h2 id="title">الخدمات</h2>
+</div>
 <div class="home-page">
 
-    <!-- قسم الخدمات -->
-    <div id="servicesSection">
 
-        <h2 id="title" class="title">الخدمات</h2>
+  <h2 id="title" class="title"></h2>
 
-        <input type="text" id="serviceSearch" placeholder="ابحث عن خدمة..." class="search" onkeyup="filterServices()">
+  <input type="text" id="serviceSearch" placeholder="ابحث عن خدمة..." class="search" onkeyup="filterServices()">
 
-        <div class="cards" id="servicesList"></div>
-
-    </div>
-
-    <!-- قسم الخطوات -->
-    <div id="stepsSection" style="display:none;">
-
-        <h2 class="title">خطوات الخدمة</h2>
-
-        <div id="stepsContent"></div>
-
-        <button onclick="backToServices()">رجوع</button>
-
-    </div>
+  <div class="cards" id="servicesList"></div>
 
 </div>
+
 <script src="script.js"></script>
+<script>
+let params = new URLSearchParams(window.location.search);
+let dirName = params.get("dir");
+
+if(dirName){
+  document.getElementById("title").innerText = "خدمات " + dirName;
+}
+</script>
 </body>
 </html>
