@@ -5,102 +5,271 @@ body {
   background: #f4f6f9;
 }
 
-/* ===== الهيدر ===== */
-.header {
-  
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  padding: 15px 20px;
-  color: white;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-
+/* Splash */
+.splash {
+  height: 100vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
-.header h2 {
-  flex: 1;
-  text-align: center;
-  margin: 0;
-}
-/* ===== زر الرجوع ===== */
 
-.back-btn {
+.content {
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
   background: white;
   color: #2a5298;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  opacity: 0.8;
+}
+
+/* Login + Register */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-box h2 {
+  margin: 0;
+  text-align: center;
+}
+
+/* inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2a5298;
+  color: white;
   border: none;
-  padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
 }
-/* ===== الصفحة ===== */
+
+/* switch text */
+.switch-text {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.switch-text span {
+  color: #2a5298;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===== الصفحة الرئيسية بنفس الهوية ===== */
+
 .home-page {
   padding: 20px;
 }
 
-/* ===== العنوان ===== */
 .title {
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* ===== البحث ===== */
+/* البحث */
 .search {
   width: 100%;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #ddd;
-  margin: 20px 0;
+  box-sizing: border-box;
+  margin: 15px 0;
 }
-/* ===== الكروت ===== */
+
+/* الكروت */
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
 
-/* ===== الكارد ===== */
 .card {
   background: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  position: relative;
-  transition: 0.3s;
-  border-right: 5px solid #2a5298;
+  padding: 20px;
   text-align: center;
-}
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
 
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+  position: relative;
+}
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.02);
+  z-index: 10;
+}
+/* عنوان الصفحة */
+.header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 25px;
+  color: white;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
-/* ===== ألوان مثل الصورة ===== */
-.card:nth-child(1) { border-right-color: #00bcd4; }
-.card:nth-child(2) { border-right-color: #ff9800; }
-.card:nth-child(3) { border-right-color: #9c27b0; }
-.card:nth-child(4) { border-right-color: #4caf50; }
-.card:nth-child(5) { border-right-color: #f44336; }
-.card:nth-child(6) { border-right-color: #3f51b5; }
+/* كارد القسم */
+.section-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 25px;
 
-/* ===== العناوين ===== */
-h3 {
-  color: #2a5298;
-  border-right: 4px solid #2a5298;
-  padding-right: 10px;
-  margin-top: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+
+  transition: 0.3s;
+}
+.section-card:hover {
+  transform: translateY(-5px) scale(1.02);
 }
 
-/* ===== القوائم ===== */
-ul, ol {
-  background: white;
-  padding: 15px;
+/* عنوان القسم */
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* عناصر داخل القسم */
+.item-box {
+  background: #f1f5ff;
+  padding: 12px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  margin-bottom: 10px;
+  position: relative;
+  transition: 0.2s;
 }
 
-li {
-  margin-bottom: 10px;
-  line-height: 1.8;
+/* الخط الجانبي */
+.item-box::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* تأثير hover */
+.item-box:hover {
+  background: #e6ecff;
+  transform: scale(1.02);
+}
+/* انيميشن دخول */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تطبيق الانيميشن */
+.section-card {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* تأخير بسيط بين الكروت */
+.section-card:nth-child(1) { animation-delay: 0.1s; }
+.section-card:nth-child(2) { animation-delay: 0.2s; }
+.section-card:nth-child(3) { animation-delay: 0.3s; }
+.section-card:nth-child(4) { animation-delay: 0.4s; }
+/* ===== موبايل ===== */
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .section-card {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .item-box {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  /* الهيدر */
+  .header {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+}
+.header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 20px;
+    color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 16px;
 }
